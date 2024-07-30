@@ -21,6 +21,10 @@
     - __celery -A config worker -l INFO__ [-P eventlet] - дополнительный параметр для Windows
     - __celery -A config beat -l INFO__
 
+* Пользователи и пароли по умолчанию (для проверяющего):
+    - ID=1 admin@example.com - 123456
+    - ID=2 user@example.com - user1user
+    - ID=3 guest@example.com - guest1guest
 * Для пользователя __user@example.com__ с ID=2 будет установлен __"tgm_id"__ указанный в .env файле под параметром __TELEGRAM_CHAT_ID__.  
 
 ### Основные URL
