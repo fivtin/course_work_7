@@ -1,0 +1,182 @@
+[
+  {
+    "model": "habit.habit",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "action": "squat 10 times",
+      "when": "12:00:00",
+      "place": "any place",
+      "is_pleasant": false,
+      "related_to": null,
+      "reward": "eat an apple",
+      "period": 1,
+      "duration": 120,
+      "is_public": true,
+      "created_at": "2024-07-30T19:53:20.798Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "action": "drink water",
+      "when": "11:00:00",
+      "place": "any place",
+      "is_pleasant": false,
+      "related_to": null,
+      "reward": null,
+      "period": 1,
+      "duration": 120,
+      "is_public": false,
+      "created_at": "2024-07-30T19:53:20.798Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "action": "drink coffee",
+      "when": null,
+      "place": "work",
+      "is_pleasant": true,
+      "related_to": null,
+      "reward": null,
+      "period": 1,
+      "duration": 120,
+      "is_public": true,
+      "created_at": "2024-07-30T19:53:20.798Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "action": "eye exercise",
+      "when": "10:00:00",
+      "place": "any place",
+      "is_pleasant": false,
+      "related_to": null,
+      "reward": "",
+      "period": 1,
+      "duration": 120,
+      "is_public": true,
+      "created_at": "2024-07-30T19:53:20.798Z"
+    }
+  },
+  {
+    "model": "habit.habit",
+    "pk": 5,
+    "fields": {
+      "user": 2,
+      "action": "check your email",
+      "when": "08:30:00",
+      "place": "work",
+      "is_pleasant": false,
+      "related_to": 3,
+      "reward": "",
+      "period": 1,
+      "duration": 120,
+      "is_public": false,
+      "created_at": "2024-07-30T19:53:20.798Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$GMdr0TSDpwENOVxuV1Z0bT$9RlV5WOdu2lOimh+IZioBRWh8q39QPDLnW9vCMf6giE=",
+      "last_login": null,
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-30T08:15:09.902Z",
+      "email": "admin@example.com",
+      "first_name": "admin",
+      "last_name": "",
+      "tgm_id": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$QzxfBmoDLVKQYssFklaH6W$0ph/dbNAEoqJaN1+Oh5cJkBTVuN2ToSo5sptm1/5iZo=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T08:15:10.400Z",
+      "email": "user@example.com",
+      "first_name": "user",
+      "last_name": "",
+      "tgm_id": "944197735",
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$MZycNe4T7wftHJuAireQk2$O53iF2iHP4v/0hTXlPbBRlrk9VGdDesSek+3sUQqPp4=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T08:15:10.805Z",
+      "email": "guest@example.com",
+      "first_name": "guest",
+      "last_name": "",
+      "tgm_id": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$rOsGaXjFG40cOEDhsZgM5h$Sabs/jHw2sj1GEAtd3pf88Q1ZMyjvIr+pU80kyowlU4=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T17:19:13.275Z",
+      "email": "test4@example.com",
+      "first_name": null,
+      "last_name": null,
+      "tgm_id": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$NinCbO7EwtKzjL5Tynu95E$HbrCtyu+xcqSSz5YZAnatO0LFXvEe/yLJpTv0SC+Bv4=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T17:19:43.218Z",
+      "email": "test5@example.com",
+      "first_name": null,
+      "last_name": null,
+      "tgm_id": null,
+      "token": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
