@@ -27,7 +27,7 @@ load_dotenv()
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG_MODE')
+DEBUG = os.getenv('DJANGO_DEBUG_MODE') == 'True'
 
 ALLOWED_HOSTS = []
 
@@ -155,6 +155,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 CACHE_ENABLED = os.getenv('REDIS_CACHE_ENABLED') == 'True'
 if CACHE_ENABLED:
     CACHES = {
@@ -170,6 +171,7 @@ AUTH_USER_MODEL = 'users.User'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/users/login'
+
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
@@ -200,15 +202,12 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOW_ALL_ORIGINS = False
 
-#
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://read-and-write.example.com",
-#     #  Замените на адрес вашего фронтенд-сервера
-#     # и добавьте адрес бэкенд-сервера
-# ]
 
-
-STRIPE_API_KEY = os.getenv('STRIPE_API_KEY')
+CSRF_TRUSTED_ORIGINS = [
+    "https://read-and-write.example.com",
+    #  Замените на адрес вашего фронтенд-сервера
+    # и добавьте адрес бэкенд-сервера
+]
 
 
 CELERY_BROKER_URL = os.getenv('REDIS_LOCATION')
