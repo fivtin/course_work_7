@@ -16,7 +16,7 @@ def telegram_auto_sending():
             now = datetime.now().strftime('%H:%M')
             if habit_when == now:
                 text = f"""{habit.when.strftime("%H:%M")} - CЕРВИС ПРИВЫЧЕК:
-                Время сделать {habit.action} в {habit.place}."""
+Время выполнить '{habit.action}' в {habit.place}."""
 
                 if habit.reward:
                     text = f'{text}\nЗа это можно {habit.reward}.'
