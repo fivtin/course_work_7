@@ -19,7 +19,7 @@ class HabitTestCase(APITestCase):
             when="14:00",
             place="place",
             is_pleasant=False,
-            refers_to=None,
+            related_to=None,
             reward=None,
             period=5,
             duration=120,
