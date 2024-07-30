@@ -9,22 +9,56 @@ from users.models import User
 
 class Habit(models.Model):
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='пользователь')
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        verbose_name='пользователь'
+    )
 
-    action = models.CharField(max_length=255, verbose_name='действие')
-    when = models.CharField(max_length=255, verbose_name='время')
-    place = models.CharField(max_length=255, verbose_name='место')
+    action = models.CharField(
+        max_length=255,
+        verbose_name='действие'
+    )
+    when = models.TimeField(
+        **NULLABLE,
+        verbose_name='время'
+    )
+    place = models.CharField(
+        max_length=255,
+        verbose_name='место'
+    )
 
-    is_nice = models.BooleanField(default=False, verbose_name='приятная')
+    is_pleasant = models.BooleanField(
+        default=False,
+        verbose_name='приятная'
+    )
 
-    related_to = models.ForeignKey('Habit', on_delete=models.SET_NULL, **NULLABLE, verbose_name='связанная привычка')
+    related_to = models.ForeignKey(
+        'Habit',
+        on_delete=models.SET_NULL,
+        **NULLABLE,
+        verbose_name='связанная привычка'
+    )
 
-    reward = models.CharField(max_length=512, verbose_name='вознаграждение')
+    reward = models.CharField(
+        max_length=512,
+        **NULLABLE,
+        verbose_name='вознаграждение'
+    )
 
-    period = models.PositiveSmallIntegerField(default=1, verbose_name='периодичность (дней)')
-    duration = models.PositiveSmallIntegerField(default=2, verbose_name='продолжительность (минут)')
+    period = models.PositiveSmallIntegerField(
+        default=1,
+        verbose_name='периодичность (дней)'
+    )
+    duration = models.PositiveSmallIntegerField(
+        default=120,
+        verbose_name='продолжительность (секунд)'
+    )
 
-    is_public = models.BooleanField(default=False, verbose_name='публичная')
+    is_public = models.BooleanField(
+        default=False,
+        verbose_name='публичная'
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -9,26 +9,19 @@ class JWTTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
 
-        # Добавление пользовательских полей в токен
         token['username'] = user.username
         token['email'] = user.email
 
         return token
 
 
-class UserSerializer(ModelSerializer):
+class UserCreateSerializer(ModelSerializer):
+
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('email', 'tgm_id', 'password', 'first_name', 'last_name', )
 
-
-# class UserUpdateSerializer(ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ['first_name', 'last_name', 'phone', 'city', 'image', ]
-#
-#
-# class UserRetrieveSerializer(ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ['email', 'first_name', 'last_name', 'phone', 'city', 'image', ]
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        del representation['password']
+        return representation
